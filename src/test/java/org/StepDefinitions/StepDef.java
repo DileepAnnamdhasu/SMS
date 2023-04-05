@@ -11,14 +11,14 @@ import org.pageObjectRep.studentAdmissionPage;
 
 
 public class StepDef extends basePage {
-    public static WebDriver driver = null;
+    public static WebDriver driver;
 
     public static loginPage login;
     public static studentAdmissionPage sap;
 
     @Given("user is navigating to SMS login page")
     public void user_is_navigating_to_sms_login_page() throws InterruptedException {
-        getChromeDriver();
+        driver = getChromeDriver();
         maximizeWindow();
         login = new loginPage(driver);
         sap=new studentAdmissionPage(driver);

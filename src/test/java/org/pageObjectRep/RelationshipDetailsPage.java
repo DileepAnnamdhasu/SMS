@@ -3,8 +3,8 @@ package org.pageObjectRep;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class RelationshipDetailsPage {
-    public static WebDriver driver;
+public class RelationshipDetailsPage extends basePage{
+
     By primary1_rdb = By.xpath("(//input[@name='contactprimary'])[1]");
     By primary2_rdb=By.xpath("(//input[@name='contactprimary'])[2]");
     By firstName_tb_RD = By.xpath("(//div[@class='col-lg-8']/input[@formcontrolname='firstName'])[2]");

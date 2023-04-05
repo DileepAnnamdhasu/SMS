@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class studentAdmissionPage {
-    public static WebDriver driver;
+public class studentAdmissionPage extends basePage{
+
 
     //student Addmission
     By firstName_srch_tb1 = By.xpath("(//input[@class='form-control input-xs ng-pristine ng-invalid ng-touched'])[1]");

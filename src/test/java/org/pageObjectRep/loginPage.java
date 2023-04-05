@@ -10,9 +10,8 @@ import org.testng.Assert;
 import java.time.Duration;
 
 
-public class loginPage {
+public class loginPage extends basePage{
 
-    public static WebDriver driver;
     By image = By.xpath("//img[@alt='SMS']");
      By userName = By.xpath("//input[@placeholder='Username']");
     By password = By.xpath("//input[@placeholder='Enter Password']");
@@ -65,7 +64,7 @@ public class loginPage {
 //        alert.accept();
 
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+            WebDriverWait wait = new WebDriverWait(driver, 10);
             wait.until(ExpectedConditions.alertIsPresent());
             Alert alert = driver.switchTo().alert();
             System.out.println(alert.getText());
@@ -83,7 +82,7 @@ public class loginPage {
 //        Assert.assertEquals(alert2,"Password is Invalid. Try with correct password");
 //        alert.accept();
         try {
-            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(3));
+            WebDriverWait wait = new WebDriverWait(driver,10);
             wait.until(ExpectedConditions.alertIsPresent());
             Alert alert = driver.switchTo().alert();
             System.out.println(alert.getText());
